@@ -11,7 +11,7 @@ server {
     # frontend container is left running). Using a variable in proxy_pass forces
     # re-resolution; the resolver below is the Docker daemon's internal DNS.
     location /api/ {
-        resolver 127.0.0.11 valid=5s;
+        resolver 8.8.8.8 1.1.1.1 valid=5s;
         set $upstream ${BACKEND_URL};
         proxy_pass $upstream;
         proxy_set_header Host $host;
