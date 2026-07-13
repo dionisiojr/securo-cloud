@@ -10,8 +10,9 @@ When the application starts for the first time, the system itself will automatic
 
 To enable free cloud hosting and resolve environment discrepancies, we modified the minimum number of files possible relative to the original project:
 
-1. `backend/start.sh` *(Added)*: A lifecyle script that automates database infrastructure management. It automatically runs `alembic upgrade head` to build/update all tables on deploy before starting the Uvicorn server.
-2. `frontend/default.conf.template` *(Modified)*: Reverted the local Docker DNS resolver (`127.0.0.11`) back to a direct `proxy_pass ${BACKEND_URL};` structure, ensuring Nginx can correctly resolve the public Render backend URL instead of looking for local Docker internal daemons.
+1. `backend/start.sh` *(Added)*: A lifecycle script that automates database infrastructure management. It automatically runs `alembic upgrade head` to build/update all tables on deploy before starting the Uvicorn server.
+2. `frontend/default.conf.template` *(Modified)*: Converted the static Nginx configuration into a dynamic template that uses environment variables for the backend URL and the DNS resolver, allowing seamless routing on both local Docker and cloud environments without causing loop detection errors.
+3. `docker-compose.yml` *(Modified)*: Added the `NGINX_RESOLVER: 127.0.0.11` environment variable to the frontend service. This injects the default local Docker internal DNS daemon into the new Nginx template during local execution, ensuring that local development remains completely unaffected by the cloud-native optimization.
 
 ---
 
