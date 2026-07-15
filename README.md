@@ -9,7 +9,7 @@
   <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL--3.0-blue.svg" alt="License: AGPL-3.0" /></a>
   <a href="https://discord.gg/rUqTKtQ9S4"><img src="https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?logo=discord&logoColor=white" alt="Join our Discord" /></a>
   <br />
-  <a href="https://usesecuro.com/">Website</a> · <a href="https://demo.usesecuro.com/">Try our Demo</a> · <a href="https://docs.usesecuro.com/">Read the Docs</a> · <a href="https://discord.gg/rUqTKtQ9S4">Discord</a> . <a href="CLOUDHOST.md">CloudHost</a>
+  <a href="https://usesecuro.com/">Website</a> · <a href="https://demo.usesecuro.com/">Try our Demo</a> · <a href="https://docs.usesecuro.com/">Read the Docs</a> · <a href="https://discord.gg/rUqTKtQ9S4">Discord</a>
 </p>
 
 <h3 align="center">Finance apps want your data. This one doesn't.</h3>
