@@ -79,8 +79,8 @@ Now we deploy the core engine of the application, connecting it to our cloud Dat
 
 | Key | Description / Example |
 | --- | --- |
-| `BACKEND_URL` | `[https://your-backend-service.onrender.com](https://your-backend-service.onrender.com)` *(Public URL generated for this backend)* |
-| `FRONTEND_URL` | `[https://your-frontend-service.onrender.com](https://your-frontend-service.onrender.com)` *(Public URL generated for the frontend)* |
+| `BACKEND_URL` | `https://your-backend-service.onrender.com (https://your-backend-service.onrender.com)` *(Public URL generated for this backend)* |
+| `FRONTEND_URL` | `https://your-frontend-service.onrender.com (https://your-frontend-service.onrender.com)` *(Public URL generated for the frontend)* |
 | `DATABASE_URL` | `postgresql+asyncpg://postgres.[id]:[percent_encoded_pass]@host:5432/postgres` *(Configured in Step 1)* | 
 | `REDIS_URL` | `redis://...` *(Internal URL retrieved in Step 2)* |
 | `SECRET_KEY` | Generate via terminal: `openssl rand -hex 32` |
@@ -88,7 +88,7 @@ Now we deploy the core engine of the application, connecting it to our cloud Dat
 | `OIDC_PROVIDER_NAME` | `Google` |
 | `OIDC_CLIENT_ID` | `your-client-id.apps.googleusercontent.com` |
 | `OIDC_CLIENT_SECRET` | `your-google-client-secret` |
-| `OIDC_DISCOVERY_URL` | `[https://accounts.google.com/.well-known/openid-configuration]` |
+| `OIDC_DISCOVERY_URL` | `https://accounts.google.com/.well-known/openid-configuration` |
 | `OIDC_AUTO_REGISTER` | `true` |
 | `OIDC_REQUIRE_VERIFIED_EMAIL` | `true` |
 | `OIDC_EXISTING_USER_LINK_MODE` | `verified_email` |
@@ -121,8 +121,8 @@ Deploy the Frontend Web Service to serve the application user interface.
 | Key | Example Value | Description |
 | --- | --- | --- |
 | **`PROXY_HOST`** | **`your-backend-service.onrender.com`** | **Required:** Pure backend domain (without `https://` or trailing slashes) to prevent Nginx proxy looping. |
-| `BACKEND_URL` | `[https://your-backend-service.onrender.com]` | Full public URL of the backend. |
-| `VITE_API_URL` | `[https://your-backend-service.onrender.com]` | API endpoint URL used in the Vite bundle. |
+| `BACKEND_URL` | `https://your-backend-service.onrender.com` | Full public URL of the backend. |
+| `VITE_API_URL` | `https://your-backend-service.onrender.com` | API endpoint URL used in the Vite bundle. |
 | `NGINX_RESOLVER` | `1.1.1.1` | Primary DNS resolver for Nginx (e.g., Cloudflare 1.1.1.1). |
 
 5. Click **Deploy Web Service**.
