@@ -18,7 +18,6 @@ FROM nginxinc/nginx-unprivileged:alpine
 # This prevents Nginx from failing on boot in environments where NGINX_RESOLVER 
 # is unset, while allowing PaaS to dynamically resolve upstream backends
 # without hardcoding IPs or hitting 508 Loop Detected errors.
-ENV NGINX_RESOLVER=127.0.0.11
 ENV PROXY_HOST=\$host
 
 COPY --from=build /app/dist /usr/share/nginx/html
